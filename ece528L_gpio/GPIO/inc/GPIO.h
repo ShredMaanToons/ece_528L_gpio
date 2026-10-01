@@ -326,14 +326,14 @@ void LED_Pattern_1(uint8_t button_status);
  * @return None
  */
 void LED_Pattern_2(void);
-// Start mod here
+
 /**
- * @brief The LED_Pattern_2 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
+ * @brief The LED_Pattern_3 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
  *
- * This function turns on LED1 with a red color, sets the RGB LED to display a red color,
- * and then initiates a binary counter pattern on the PMOD 8LD module. The counter starts from 0
- * and increments up to 255 (0xFF) with a delay of 100 ms between each count. The sequence stops if
- * a specific switch status is detected or if led_count has reached 0xFF.
+ * This function turns on LED1 with a red color, sets the RGB LED to display a blue color,
+ * and then initiates an 8-bit binary down counter on the PMOD 8LD module. The counter starts from 255 (0xFF)
+ * and increments down to 0 with a delay of 100 ms between each count. The sequence stops if
+ * a specific switch status is detected or if led_count has reached 0.
  *
  *
  * @param None
@@ -343,12 +343,13 @@ void LED_Pattern_2(void);
 void LED_Pattern_3(void);
 
 /**
- * @brief The LED_Pattern_2 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
+ * @brief The LED_Pattern_4 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
  *
- * This function turns on LED1 with a red color, sets the RGB LED to display a red color,
- * and then initiates a binary counter pattern on the PMOD 8LD module. The counter starts from 0
- * and increments up to 255 (0xFF) with a delay of 100 ms between each count. The sequence stops if
- * a specific switch status is detected or if led_count has reached 0xFF.
+ * This function turns off LED1 and the RGB LED
+ * and then initiates a ring counter pattern on the PMOD 8LD module. The counter starts from 0
+ * and sets the next least significant bit to 1 and all other bits to 0. This causes the value to = 2^iteration
+ * there is a delay of 200 ms between each count. The sequence stops if
+ * a specific switch status is detected or if all 8 iterations have occured.
  *
  *
  * @param None
@@ -358,12 +359,13 @@ void LED_Pattern_3(void);
 void LED_Pattern_4(void);
 
 /**
- * @brief The LED_Pattern_2 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
+ * @brief The LED_Pattern_5 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
  *
- * This function turns on LED1 with a red color, sets the RGB LED to display a red color,
- * and then initiates a binary counter pattern on the PMOD 8LD module. The counter starts from 0
- * and increments up to 255 (0xFF) with a delay of 100 ms between each count. The sequence stops if
- * a specific switch status is detected or if led_count has reached 0xFF.
+ * This function turns off LED1 and the RGB LED
+ * and then initiates a ring counter pattern on the PMOD 8LD module. The counter starts from 128
+ * and sets the next most significant bit to 1 and all other bits to 0. This causes the value to = 128 - 2^iteration
+ * there is a delay of 200 ms between each count. The sequence stops if
+ * a specific switch status is detected or if all 8 iterations have occured.
  *
  *
  * @param None
@@ -373,12 +375,13 @@ void LED_Pattern_4(void);
 void LED_Pattern_5(void);
 
 /**
- * @brief The LED_Pattern_2 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
+ * @brief The Johnson_Counter function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
  *
- * This function turns on LED1 with a red color, sets the RGB LED to display a red color,
- * and then initiates a binary counter pattern on the PMOD 8LD module. The counter starts from 0
- * and increments up to 255 (0xFF) with a delay of 100 ms between each count. The sequence stops if
- * a specific switch status is detected or if led_count has reached 0xFF.
+ * This function turns on LED1 with a red color, sets the RGB LED to display a Green color,
+ * and then creates a twisted ring counter pattern on the PMOD 8LD module. The counter starts with all bits set to 0
+ * and each iteration toggles the bit to the left of the last toggled bit, starting at the least significant bit.
+ * There is a delay of 200 ms between each count. The sequence stops if
+ * a specific switch status is detected or if all 16 iterations have occured.
  *
  *
  * @param None
@@ -386,7 +389,7 @@ void LED_Pattern_5(void);
  * @return None
  */
 void Johnson_Counter(void);
-// End mod here
+
 /**
  * @brief The LED_Controller function selects and executes an appropriate LED pattern based on button and switch statuses.
  *
