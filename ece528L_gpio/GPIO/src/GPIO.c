@@ -25,6 +25,7 @@
 
 #include "../inc/GPIO.h"
 #include "../inc/Clock.h"
+#include <math.h>
 
 // Constant definitions for the built-in red LED
 const uint8_t RED_LED_OFF           =   0x00;
@@ -45,6 +46,14 @@ const uint8_t PMOD_8LD_ALL_OFF      =   0x00;
 const uint8_t PMOD_8LD_ALL_ON       =   0xFF;
 const uint8_t PMOD_8LD_0_3_ON       =   0x0F;
 const uint8_t PMOD_8LD_4_7_ON       =   0xF0;
+const uint8_t PMOD_8LD_EVEN_ON      =   0x55;
+const uint8_t PMOD_8LD_ODD_ON       =   0xAA;
+
+// Additional constant definitions
+const uint8_t SWT2_ON               =   0x02;
+const uint8_t SWT12_ON              =   0x03;
+const uint8_t SWT3_ON               =   0x04;
+const uint8_t SWT4_ON               =   0x08;
 
 void LED1_Init(void)
 {
@@ -93,7 +102,7 @@ void Buttons_Init(void)
 {
     P1->SEL0 &= ~0x12;
     P1->SEL1 &= ~0x12;
-    P1->DIR |= ~0x12;
+    P1->DIR &= ~0x12; //-------------------------------------------- Should be &= ?????
     P1->REN |= 0x12;
     P1->OUT |= 0x12;
 }
@@ -143,6 +152,10 @@ void LED_Pattern_1(uint8_t button_status)
             LED1_Output(RED_LED_ON);
             LED2_Output(RGB_LED_GREEN);
             PMOD_8LD_Output(PMOD_8LD_ALL_ON);
+            Clock_Delay1ms(1000);
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_OFF);
+            Clock_Delay1ms(1000);
             break;
         }
 
@@ -152,7 +165,8 @@ void LED_Pattern_1(uint8_t button_status)
         {
             LED1_Output(RED_LED_ON);
             LED2_Output(RGB_LED_OFF);
-            PMOD_8LD_Output(PMOD_8LD_0_3_ON);
+//            PMOD_8LD_Output(PMOD_8LD_0_3_ON);
+            PMOD_8LD_Output(PMOD_8LD_EVEN_ON);
             break;
         }
 
@@ -161,8 +175,10 @@ void LED_Pattern_1(uint8_t button_status)
         case 0x02:
         {
             LED1_Output(RED_LED_OFF);
-            LED2_Output(RGB_LED_GREEN);
-            PMOD_8LD_Output(PMOD_8LD_4_7_ON);
+//            LED2_Output(RGB_LED_GREEN);
+            LED2_Output(RGB_LED_BLUE);
+//            PMOD_8LD_Output(PMOD_8LD_4_7_ON);
+            PMOD_8LD_Output(PMOD_8LD_ODD_ON);
             break;
         }
 
@@ -171,7 +187,8 @@ void LED_Pattern_1(uint8_t button_status)
         {
             LED1_Output(RED_LED_OFF);
             LED2_Output(RGB_LED_OFF);
-            PMOD_8LD_Output(PMOD_8LD_ALL_OFF);
+//            PMOD_8LD_Output(PMOD_8LD_ALL_OFF);
+            PMOD_8LD_Output(PMOD_8LD_ALL_ON);
             break;
         }
     }
@@ -194,6 +211,75 @@ void LED_Pattern_2(void)
     }
 }
 
+void LED_Pattern_3(void)
+{
+    LED1_Output(RED_LED_ON);
+    LED2_Output(RGB_LED_BLUE);
+    for (int led_count = 0xFF; led_count >= 0; led_count--)
+    {
+        PMOD_8LD_Output(led_count);
+        Clock_Delay1ms(100);
+        uint8_t switch_status = Get_PMOD_SWT_Status();
+        if (switch_status != SWT2_ON)
+        {
+            break;
+        }
+    }
+}
+
+void LED_Pattern_4(void)
+{
+    LED1_Output(RED_LED_OFF);
+    LED2_Output(RGB_LED_OFF);
+    for (int i = 0; i <= 7; i++)
+    {
+        PMOD_8LD_Output(pow(2,i));
+        Clock_Delay1ms(200);
+        uint8_t switch_status = Get_PMOD_SWT_Status();
+        if (switch_status != SWT3_ON)
+        {
+            break;
+        }
+    }
+}
+
+void LED_Pattern_5(void)
+{
+    LED1_Output(RED_LED_OFF);
+    LED2_Output(RGB_LED_OFF);
+    for (int i = 7; i >= 0; i--)
+    {
+        PMOD_8LD_Output(pow(2,i));
+        Clock_Delay1ms(200);
+        uint8_t switch_status = Get_PMOD_SWT_Status();
+        if (switch_status != SWT4_ON)
+        {
+            break;
+        }
+    }
+}
+
+void Johnson_Counter(void)
+{
+    LED1_Output(RED_LED_ON);
+    LED2_Output(RGB_LED_GREEN);
+    uint8_t LD_out = 0x00;
+    for (int n = 0; n <= 1; n++)
+    {
+        for (int i = 0; i <= 7; i++)
+        {
+            LD_out ^= (1 << i);
+            PMOD_8LD_Output(LD_out);
+            Clock_Delay1ms(200);
+            uint8_t switch_status = Get_PMOD_SWT_Status();
+            if (switch_status != SWT12_ON)
+            {
+                break;
+            }
+        }
+    }
+}
+
 void LED_Controller(uint8_t button_status, uint8_t switch_status)
 {
     switch(switch_status)
@@ -207,6 +293,30 @@ void LED_Controller(uint8_t button_status, uint8_t switch_status)
         case 0x01:
         {
             LED_Pattern_2();
+        }
+        break;
+
+        case SWT2_ON:
+        {
+            LED_Pattern_3();
+        }
+        break;
+
+        case SWT3_ON:
+        {
+            LED_Pattern_4();
+        }
+        break;
+
+        case SWT4_ON:
+        {
+            LED_Pattern_5();
+        }
+        break;
+
+        case SWT12_ON:
+        {
+            Johnson_Counter();
         }
         break;
 

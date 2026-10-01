@@ -327,6 +327,18 @@ void LED_Pattern_1(uint8_t button_status);
  */
 void LED_Pattern_2(void);
 
+
+void LED_Pattern_3(void);
+
+
+void LED_Pattern_4(void);
+
+
+void LED_Pattern_5(void);
+
+
+void Johnson_Counter(void);
+
 /**
  * @brief The LED_Controller function selects and executes an appropriate LED pattern based on button and switch statuses.
  *
