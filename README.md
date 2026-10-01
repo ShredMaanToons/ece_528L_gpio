@@ -20,6 +20,7 @@
 
 <details>
 <summary><h2>Components</h2></summary>
+  
 <b>Description</b> | <b>Quantity</b> | <b>Manufacture</b>
 --- | --- | ---
 MSP432 LaunchPad | 1 | Texas Instruments
