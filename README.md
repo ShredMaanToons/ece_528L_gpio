@@ -80,6 +80,7 @@ When both of these are set to 0 the pin is as GPIO, but the direction still need
 5. Exit debugging.
 
 <b>Tasks</b>
+---
 1. Modify LED_pattern_1 by changing color for the RGB LED, adding a blinking function, and changing when the PMOD 8LD is active.
 2. Create the LED_pattern_3 function by building a binary down counter.
 3. Create the LED_pattern_4 function by building a ring counter.
