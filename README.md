@@ -70,9 +70,18 @@ When both of these are set to 0 the pin is as GPIO, but the direction still need
 <details>
 <summary><h2>Procedure</h2></summary>
 
-1. test item 1
-2. test item 2
-3. test item 3
+1. Copy repository using Git Bash
+2. Connect the PMOD SWT to the MSP432 LaunchPad
+
+<b>PMOD SWT Pin</b> | <b>MSP432 LaunchPad Pin</b>
+--- | ---
+SWT1 | P10.0
+SWT2 | P10.1
+SWT3 | P10.2
+SWT4 | P10.3
+Pin 5 (GND) | GND
+Pin 6 (VCC) | VCC (3.3V)
+4. test item 3
 </details>
 
 
