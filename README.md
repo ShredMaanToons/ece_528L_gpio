@@ -35,7 +35,26 @@ PMOD SWT | 1 | Digilent
 <details>
 <summary><h2>Theory</h2></summary>
 
+**Key Concepts**
+---
+
+<details>
+<summary><b>Active Low</b></summary>
+
+The launchpad buttons are active low, meaning the pins they connect to will be set to 1 by default and only become 0 when the button is pressed.    
+This requires that the internal resistors are activated as pull up resistors to ensure that the pins are in a known state when no external signal is connected.
+
+> [!TIP]
+> Button one is mapped to pin P1.1
+> Button two is mapped to pin P1.4
+</details>
+
+<details>
+<summary><b>GPIO Initialization</b></summary>
+
 text
+</details>
+
 </details>
 
 
