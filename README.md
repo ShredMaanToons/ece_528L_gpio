@@ -46,7 +46,8 @@ This requires that the internal resistors are activated as pull up resistors to 
 
 <table>
     <tr>
-      <td>⚠️ <b>WARNING:</b> This is an alert box inside a collapsed section.</td>
+      <td>⚠️ <b>Tip:</b> Button one is mapped to pin P1.1  
+Button two is mapped to pin P1.4</td>
     </tr>
   </table>
 
