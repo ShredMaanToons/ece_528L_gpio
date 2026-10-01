@@ -2,7 +2,9 @@
 **CSU Northridge**
 
 **Department of Electrical and Computer Engineering**
-
+> [!TIP]
+> Button one is mapped to pin P1.1  
+> Button two is mapped to pin P1.4
 ## GPIO Lab
 ### Thomas Anderson / 
 ---
@@ -44,11 +46,13 @@ PMOD SWT | 1 | Digilent
 The launchpad buttons are active low, meaning the pins they connect to will be set to 1 by default and only become 0 when the button is pressed.    
 This requires that the internal resistors are activated as pull up resistors to ensure that the pins are in a known state when no external signal is connected.
 
+
+
+</details>
+
 > [!TIP]
 > Button one is mapped to pin P1.1  
 > Button two is mapped to pin P1.4
-
-</details>
 
 <details>
 <summary><b>GPIO Initialization</b></summary>
