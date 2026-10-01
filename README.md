@@ -46,7 +46,7 @@ This requires that the internal resistors are activated as pull up resistors to 
 
 > [!TIP]
 > Button one is mapped to pin P1.1
-> Button two is mapped to pin P1.4
+
 </details>
 
 <details>
