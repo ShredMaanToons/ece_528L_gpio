@@ -57,8 +57,8 @@ This requires that the internal resistors are activated as pull up resistors to 
 
 To initialize general purpose input and output for a pin we must set multiple bits that are used to control the purpose of the pin.    
 <b>First</b> we must set select 0 (<b>SEL0</b>) and select 1 (<b>SEL1</b>) registers in the port we want to use.    
-When both of these are set to 0 the pin is as GPIO, but the direction still needs to be specified.
-<b>Second</b> we must set the direction (<b>DIR</b>) register, with 0 being input and 1 being output.
+When both of these are set to 0 the pin is as GPIO, but the direction still needs to be specified.    
+<b>Second</b> we must set the direction (<b>DIR</b>) register, with 0 being input and 1 being output.    
 <b>Finally</b> if we have an input we may need to enable pull up or pull down resistors.    
 <b>REN</b> is the resistor enable register which enables the resistor if the bit is set to 1.    
 <b>OUT</b> is the output register and when resistors are enabled setting the bit to 1 indicates pull up resistors and vice versa.
