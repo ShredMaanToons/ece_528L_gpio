@@ -93,5 +93,6 @@ When both of these are set to 0 the pin is as GPIO, but the direction still need
 <details>
 <summary><h2>Conclusion</h2></summary>
 
-text
+We gained a thorough understanding of all the concepts in the lab and successfully demonstrated the entire lab working without bugs.    
+<b>This lab was a complete success.</b>
 </details>
