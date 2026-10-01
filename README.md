@@ -70,7 +70,9 @@ When both of these are set to 0 the pin is as GPIO, but the direction still need
 <details>
 <summary><h2>Procedure</h2></summary>
 
-text
+1. test item 1
+2. test item 2
+3. test item 3
 </details>
 
 
