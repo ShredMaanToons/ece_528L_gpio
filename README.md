@@ -13,6 +13,6 @@
 * PMOD 8LD (8 LEDs) - [Product Link](https://digilent.com/shop/pmod-8ld-eight-high-brightness-leds/)
 </details>
 
-<details><summary>## Introduction</summary>
+## <details><summary>Introduction</summary>
 test
 </details>
