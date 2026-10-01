@@ -4,7 +4,7 @@
 **Department of Electrical and Computer Engineering**
 
 ## GPIO Lab
-### Thomas Anderson
+### Thomas Anderson / 
 ---
 <details><summary>The GPIO lab interfaces with the following:</summary>
 
@@ -16,6 +16,8 @@
 <details>
 <summary><h2>Introduction</h2></summary>
 
+This lab serves as an introduction into general purpose input/output (<b>gpio</b>) and using the <b>pmod</b> components.    
+Additionally it introduces the methods to view the memories of registers while debuging.
 </details>
 
 <details>
@@ -33,16 +35,19 @@ PMOD SWT | 1 | Digilent
 <details>
 <summary><h2>Theory</h2></summary>
 
+text
 </details>
 
 
 <details>
 <summary><h2>Procedure</h2></summary>
 
+text
 </details>
 
 
 <details>
 <summary><h2>Conclusion</h2></summary>
 
+text
 </details>
