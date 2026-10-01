@@ -45,7 +45,8 @@ The launchpad buttons are active low, meaning the pins they connect to will be s
 This requires that the internal resistors are activated as pull up resistors to ensure that the pins are in a known state when no external signal is connected.
 
 > [!TIP]
-> Button one is mapped to pin P1.1
+> Button one is mapped to pin P1.1  
+> Button two is mapped to pin P1.4
 
 </details>
 
