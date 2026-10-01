@@ -21,6 +21,7 @@
 <details>
 <summary><h2>Components</h2></summary>
 <b>Description</b> | <b>Quantity</b> | <b>Manufacture</b>
+--- | --- | ---
 MSP432 LaunchPad | 1 | Texas Instruments
 USB-A to Micro-USB Cable | 1 | N/A
 PMOD 8LD | 1 | Digilent
