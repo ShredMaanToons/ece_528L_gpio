@@ -17,7 +17,7 @@
 <summary><h2>Introduction</h2></summary>
 
 This lab serves as an introduction into general purpose input/output (<b>gpio</b>) and using the <b>pmod</b> components.    
-Additionally it introduces the methods to view the memories of registers while debuging.
+Additionally it introduces the methods to view the memories of registers while debugging.
 </details>
 
 <details>
@@ -69,19 +69,23 @@ When both of these are set to 0 the pin is as GPIO, but the direction still need
 
 <details>
 <summary><h2>Procedure</h2></summary>
-
+<b>Pre-Task</b>
+---
 1. Copy repository using Git Bash
-2. Connect the PMOD SWT to the MSP432 LaunchPad
+2. Connect the PMOD SWT and PMOD 8LD to the MSP432 LaunchPad
+3. Connect to computer and build then flash the program
+4. Verify that the current build works then run a debugging session and observe how the registers are modified.
+  * Screen shots of this step in "Screenshots" folder.
+5. Exit debugging.
 
-<b>PMOD SWT Pin</b> | <b>MSP432 LaunchPad Pin</b>
---- | ---
-SWT1 | P10.0
-SWT2 | P10.1
-SWT3 | P10.2
-SWT4 | P10.3
-Pin 5 (GND) | GND
-Pin 6 (VCC) | VCC (3.3V)
-4. test item 3
+<b>Tasks</b>
+1. Modify LED_pattern_1 by changing color for the RGB LED, adding a blinking function, and changing when the PMOD 8LD is active.
+2. Create the LED_pattern_3 function by building a binary down counter.
+3. Create the LED_pattern_4 function by building a ring counter.
+4. Create the LED_pattern_5 function by building a ring counter that counts backwards.
+5. Create the Johnson_Counter function by building a twisted ring counter.
+
+<b>These steps were demonstrated in lab.</b>
 </details>
 
 
