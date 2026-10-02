@@ -68,7 +68,7 @@ When both of these are set to 0 the pin is as GPIO, but the direction still need
 
 
 <details>
-<summary><h2>Procedure</h2></summary>
+<summary><h2>Analysis and Results</h2></summary>
 
 <b>Pre-Task</b>
 ---
