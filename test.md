@@ -109,7 +109,7 @@ Pin 12 (VCC) | VCC (3.3V)
 <summary><h2>Cases</h2></summary>
 
 <b>Test Case</b> | <b>Input</b> | <b>LED 1</b> | <b>RGB LED</b> |  <b>PMOD 8LD</b>
---- | --- | --- | --- | —
+--- | --- | --- | --- | ---
 0 | Button 1 is pressed | ON | OFF | LEDs 0-3: ON, LEDs 4-7: OFF
 1 | Button 2 is pressed | OFF | GREEN | LEDs 0-3: OFF, LEDs 4-7: ON
 2 | Both Button 1 and Button 2 are pressed | ON | GREEN | LEDs 0-7: ON
