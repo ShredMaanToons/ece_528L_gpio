@@ -106,21 +106,21 @@ Pin 12 (VCC) | VCC (3.3V)
 4. Verified that the current build works by testing the different Test Cases in the table below. The test cases test how the switches will affect the LEDs
 
 <details>
+<summary><h2>Cases</h2></summary>
+
 <b>Test Case</b> | <b>Input</b> | <b>LED 1</b> | <b>RGB LED</b> |  <b>PMOD 8LD</b>
 --- | --- | --- | --- | —
 0 | Button 1 is pressed | ON | OFF | LEDs 0-3: ON, LEDs 4-7: OFF
 1 | Button 2 is pressed | OFF | GREEN | LEDs 0-3: OFF, LEDs 4-7: ON
 2 | Both Button 1 and Button 2 are pressed | ON | GREEN | LEDs 0-7: ON
 3 | Neither buttons are pressed | OFF | OFF | LEDs 0-7: OFF
-<details>
 
 When only SWT1 is enabled
 
-<details>
 <b>Test Case</b> | <b>Input</b> | <b>LED 1</b> | <b>RGB LED</b> |  <b>PMOD 8LD</b>
 --- | --- | --- | --- | —
 0 | Only SWT1 is enabled | ON |RED | Binary Up Counter
-<details>
+</details>
 
 5. Then run a debugging session and observe how the registers are modified.
   * Screen shots of this step in "Screenshots" folder.
@@ -131,25 +131,27 @@ When only SWT1 is enabled
 1. Modify LED_pattern_1 by changing color for the RGB LED, adding a blinking function, and changing when the PMOD 8LD is active.
 
 <details>
+<summary><h2>Cases</h2></summary>
+
 <b>Test Case</b> | <b>Input</b> | <b>LED 1</b> | <b>RGB LED</b> |  <b>PMOD 8LD</b>
 --- | --- | --- | --- | —
 0 | Button 1 is pressed | ON | OFF | LEDs 0,2,4,6: ON, LEDs 1,3,5,7: OFF
 1 | Button 2 is pressed | OFF | BLUE | LEDs 0,2,4,6: OFF, LEDs 1,3,5,7: ON
 2 | Both Button 1 and Button 2 are pressed | Toggle every 1 second | GREEN toggle every 1 second | LEDs 0-7: OFF
 3 | Neither buttons are pressed | OFF | OFF | LEDs 0-7: ON
-<details>
+</details>
 
 2. Create the LED_pattern_3 function by building a binary down counter.
 
-<details>
 <b>Test Case</b> | <b>Input</b> | <b>LED 1</b> | <b>RGB LED</b> |  <b>PMOD 8LD</b>
 --- | --- | --- | --- | —
 0 | Only SWT2 is enabled | ON | BLUE | Binary Down Counter
-<details>
 
 3. Create the LED_pattern_4 function by building a ring counter.
 
 <details>
+<summary><h2>Cases</h2></summary>
+
 <b>Iteration</b> | <b>LED 1</b> | <b>RGB LED</b> | <b>PMOD 8LD</b>
 --- | --- | --- | ---
 0 | OFF | OFF | 1
@@ -160,12 +162,12 @@ When only SWT1 is enabled
 5 | OFF | OFF | 32
 6 | OFF | OFF | 64
 7 | OFF | OFF | 128
-<details>
+</details>
 
 4. Create the LED_pattern_5 function by building a ring counter that counts backwards.
 
 <details>
-
+<summary><h2>Cases</h2></summary>
 
 <b>Iteration</b> | <b>LED 1</b> | <b>RGB LED</b> | <b>PMOD 8LD</b>
 --- | --- | --- | ---
@@ -177,11 +179,13 @@ When only SWT1 is enabled
 5 | OFF | OFF | 4
 6 | OFF | OFF | 2
 7 | OFF | OFF | 1
-<details>
+</details>
 
 5. Create the Johnson_Counter function by building a twisted ring counter.
 
 <details>
+<summary><h2>Cases</h2></summary>
+
 <b>Iteration</b> | <b>LED 1</b> | <b>RGB LED</b> | <b>PMOD 8LD (Binary)</b>
 --- | --- | --- | ---
 0 | ON | GREEN | 0000_0000
@@ -201,7 +205,7 @@ When only SWT1 is enabled
 14 | ON | GREEN | 1100_0000
 15 | ON | GREEN | 1000_0000
 O (repeat) | ON | GREEN | 0000_0000 (repeat)
-<details>
+</details>
 
 <b>These steps were demonstrated in lab.</b>
 </details>
