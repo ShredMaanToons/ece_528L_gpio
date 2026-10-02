@@ -227,10 +227,10 @@ We both completed every component of the lab and worked on the report together.
 <summary><h2>References</h2></summary>
 
 [MSP432P401R SimpleLink Microcontroller LaunchPad Development Kit User's Guide](https://docs.rs-online.com/3934/A700000006811369.pdf)
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
+[MSP432P401R Datasheet](https://www.ti.com/lit/ds/slas826e/slas826e.pdf)
+[Robot Systems Learning Kit (TI-RSLK) User Guide](https://www.ti.com/lit/pdf/sekp166)
+[MSP432P4xx SimpleLink Microcontrollers Technical Reference Manual](https://web.archive.org/web/20200402132841/http:/www.ti.com/lit/ug/slau356i/slau356i.pdf)
+[PMOD SWT Reference Manual](https://digilent.com/reference/pmod/pmodswt/reference-manual)
+[PMOD LED Reference Manual](https://reference.digilentinc.com/reference/pmod/pmodled/reference-manual)
+[PMOD 8LD Reference Manual](https://digilent.com/reference/pmod/pmod8ld/reference-manual)
 </details>
