@@ -204,19 +204,33 @@ When only SWT1 is enabled
 13 | ON | GREEN | 1110_0000
 14 | ON | GREEN | 1100_0000
 15 | ON | GREEN | 1000_0000
-O (repeat) | ON | GREEN | 0000_0000 (repeat)
+0 (repeat) | ON | GREEN | 0000_0000 (repeat)
 </details>
 
 <b>These steps were demonstrated in lab.</b>
 </details>
 
-
 <details>
-<summary><h2>Conclusion</h2></summary>
+<summary><h2>Know Issues or Limitations</h2></summary>
 
 We gained a thorough understanding of all the concepts in the lab and successfully demonstrated the entire lab working without bugs.    
 <b>This lab was a complete success.</b>
 </details>
 
+<details>
+<summary><h2>Author Contribution</h2></summary>
 
+We both completed every component of the lab and worked on the report together.    
+</details>
 
+<details>
+<summary><h2>References</h2></summary>
+
+[MSP432P401R SimpleLink Microcontroller LaunchPad Development Kit User's Guide](https://docs.rs-online.com/3934/A700000006811369.pdf)
+[]()
+[]()
+[]()
+[]()
+[]()
+[]()
+</details>
