@@ -165,6 +165,8 @@ When only SWT1 is enabled
 4. Create the LED_pattern_5 function by building a ring counter that counts backwards.
 
 <details>
+
+
 <b>Iteration</b> | <b>LED 1</b> | <b>RGB LED</b> | <b>PMOD 8LD</b>
 --- | --- | --- | ---
 0 | OFF | OFF | 128
