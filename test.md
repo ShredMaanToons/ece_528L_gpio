@@ -118,7 +118,7 @@ Pin 12 (VCC) | VCC (3.3V)
 When only SWT1 is enabled
 
 <b>Test Case</b> | <b>Input</b> | <b>LED 1</b> | <b>RGB LED</b> |  <b>PMOD 8LD</b>
---- | --- | --- | --- | —
+--- | --- | --- | --- | ---
 0 | Only SWT1 is enabled | ON |RED | Binary Up Counter
 </details>
 
@@ -134,7 +134,7 @@ When only SWT1 is enabled
 <summary><h2>Cases</h2></summary>
 
 <b>Test Case</b> | <b>Input</b> | <b>LED 1</b> | <b>RGB LED</b> |  <b>PMOD 8LD</b>
---- | --- | --- | --- | —
+--- | --- | --- | --- | ---
 0 | Button 1 is pressed | ON | OFF | LEDs 0,2,4,6: ON, LEDs 1,3,5,7: OFF
 1 | Button 2 is pressed | OFF | BLUE | LEDs 0,2,4,6: OFF, LEDs 1,3,5,7: ON
 2 | Both Button 1 and Button 2 are pressed | Toggle every 1 second | GREEN toggle every 1 second | LEDs 0-7: OFF
@@ -144,7 +144,7 @@ When only SWT1 is enabled
 2. Create the LED_pattern_3 function by building a binary down counter.
 
 <b>Test Case</b> | <b>Input</b> | <b>LED 1</b> | <b>RGB LED</b> |  <b>PMOD 8LD</b>
---- | --- | --- | --- | —
+--- | --- | --- | --- | ---
 0 | Only SWT2 is enabled | ON | BLUE | Binary Down Counter
 
 3. Create the LED_pattern_4 function by building a ring counter.
