@@ -14,7 +14,7 @@
 </details>
 
 <details>
-<summary><h2>Introduction</h2></summary>
+<summary><h2>Overview</h2></summary>
 
 This lab serves as an introduction into general purpose input/output (<b>gpio</b>) and using the <b>pmod</b> components to read the inputs from the switches and control the outputs of the LED.    
 Additionally it introduces the methods to view the memories of registers while debugging.
