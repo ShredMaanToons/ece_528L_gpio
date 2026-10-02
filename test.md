@@ -75,6 +75,8 @@ When both of these are set to 0 the pin is as GPIO, but the direction still need
 1. Copy repository using Git Bash
 2. Connect the PMOD SWT and PMOD 8LD to the MSP432 LaunchPad using the following pin configuration
 <details>
+<summary><h2>Connections</h2></summary>
+
 <b>PMOD SWT Pin</b> | <b>MSP432 LaunchPad Pin</b> 
 --- | --- 
 SWT1 | P10.0
@@ -83,9 +85,7 @@ SWT3 | P10.2
 SWT4 | P10.3
 Pin 5 (GND) | GND
 Pin 6 (VCC) | VCC (3.3V)
-<details>
 
-<details>
 <b>PMOD 8LD Pin</b> | <b>MSP432 LaunchPad Pin</b> 
 --- | --- 
 LED0 | P9.0
@@ -100,7 +100,7 @@ LED6 | P9.6
 LED7 | P9.7
 Pin 11 (GND) | GND
 Pin 12 (VCC) | VCC (3.3V)
-<details>
+</details>
 
 3. Connect the MSP432 LaunchPad to the computer and build then flash the program
 4. Verified that the current build works by testing the different Test Cases in the table below. The test cases test how the switches will affect the LEDs
