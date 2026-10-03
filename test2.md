@@ -126,7 +126,7 @@ When only SWT1 is enabled
   * Screen shots of this step in "Screenshots" folder.
 6. Exit debugging.
 
-<b>Analysis and Results</b>
+<b>Tasks</b>
 ---
 1. Modify LED_pattern_1 by changing color for the RGB LED, adding a blinking function, and changing when the PMOD 8LD is active.
 
